@@ -1,0 +1,8 @@
+Storage Health Assessment Report
+
+* Available Storage Devices: The block device overview (lsblk) identified a primary 80.1G disk (sda) partitioned entirely to sda1, alongside a 1024M optical drive (sr0).
+* Mounted File Systems: The primary partition /dev/sda1 is mounted to the root directory (/). Several temporary filesystems (tmpfs) are also mounted for runtime and systemd operations.
+* Disk Usage Statistics: The root partition has a total capacity of 79G. Currently, 17G is used, leaving 58G available. Total disk space utilization is very healthy at exactly 23%.
+* Inode Utilization: The /dev/sda1 partition has 5,251,072 total inodes. With 489,638 in use, inode utilization is low and safe at only 10%.
+* Storage Health Observations: The overall storage health is excellent. Both block storage space and file-count capacity (inodes) have massive overhead available for a new application server deployment.
+* Recommendations: No immediate storage upgrades are necessary. It is recommended to implement standard log rotation for the upcoming application server to ensure the 58G of remaining space is not unnecessarily consumed over time by continuous logging.

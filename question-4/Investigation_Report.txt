@@ -1,0 +1,7 @@
+File Access and I/O Investigation Report
+
+* Open Files Identified: Investigating with lsof revealed that background processes like systemd continuously maintain open file descriptors even when the user is idle.
+* File Descriptor Observations: The /proc/$$/fd directory showed that standard input (0), standard output (1), and standard error (2) were all dynamically linked to the pseudo-terminal (/dev/pts/0).
+* Redirection Results: Using the 2> operator successfully intercepted a system error (attempting to list a fake directory) and routed it strictly into "error_out.txt" without printing it to the console.
+* Resource Limits: The ulimit command revealed a hard cap of 1024 open files per process, along with other caps like stack size (8192 kbytes) and a pending signals limit of 14832.
+* Explanation of Linux I/O: Linux manages I/O by treating almost every device, stream, and terminal as a file. Applications read and write to abstract file descriptors (0, 1, 2) rather than interacting directly with hardware. Users can manipulate these descriptors to easily redirect outputs and errors to logs.

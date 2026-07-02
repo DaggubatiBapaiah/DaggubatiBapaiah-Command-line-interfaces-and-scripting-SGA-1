@@ -1,0 +1,6 @@
+File System and Link Analysis Report
+
+* Inode Numbers: "original_file.txt" and "hard_link.txt" both shared inode number 3932608. The symbolic link "sym_link.txt" had a separate inode number 3932609.
+* Link Comparison: A hard link points directly to the data blocks on the hard drive (sharing the inode), making it indistinguishable from the original file. A symbolic link merely contains a text path pointing to the original filename.
+* Effect of Deletion: Removing "original_file.txt" broke the symbolic link entirely. However, "hard_link.txt" remained perfectly accessible with its data intact because the actual disk data is not erased until all hard links pointing to that inode are deleted.
+* Conclusions: Hard links provide data redundancy at the file system level and prevent accidental data loss from a single rm command. Symbolic links are useful for cross-filesystem shortcuts but are highly dependent on the original file remaining in its exact location.

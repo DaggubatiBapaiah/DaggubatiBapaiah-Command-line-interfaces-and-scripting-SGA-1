@@ -1,0 +1,7 @@
+Linux Environment Verification Report
+
+. Username and Groups: The active user is "BAPAIAH", associated with the "BAPAIAH" and "users" groups.
+. Current Shell: The current command-line shell environment is /bin/bash.
+. Current Working Directory: The workspace is located at /home/BAPAIAH.
+. Workspace Contents: Verified standard user directories (Desktop, Documents, Downloads, Music, Pictures, Projects, Public, Templates, Videos) with standard drwxr-xr-x permissions.
+. Network Connectivity: The network is active and correctly configured; successfully sent and received 4 packets to google.com with 0% packet loss.

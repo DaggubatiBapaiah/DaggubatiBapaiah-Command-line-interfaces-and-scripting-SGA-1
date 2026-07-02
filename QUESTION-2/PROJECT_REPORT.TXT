@@ -1,0 +1,7 @@
+Secure Project Workspace Report
+
+* Directory Structure: Created a root directory named "project_workspace" containing two subdirectories: "docs" and "code". Inside "docs", a file named "design.txt" was created.
+* File Permissions: The initial default permissions for "design.txt" were -rw-rw-r--. The permissions for the "code" directory were securely modified to 700 (drwx------).
+* Ownership Details: Ownership of "design.txt" was explicitly set to user "BAPAIAH" and group "BAPAIAH".
+* Umask Value: The current environment umask is 0002.
+* Explanation of Protection: Setting the "code" directory permissions to 700 ensures that no one except the owner (BAPAIAH) can access, list, or modify the source code. This effectively protects sensitive project data from being accessed by group members or unauthorized users on the same system.
