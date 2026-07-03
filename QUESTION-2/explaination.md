@@ -9,4 +9,4 @@
 5. `chmod 700 project_workspace/code`
    - **Explanation:** I modified the permissions of the `code` directory to `rwx------`. This strictly locks down the folder so only the owner can read, write, or execute files inside it, enhancing security.
 6. `chown $USER:$USER project_workspace/docs/design.txt`
-   - **Explanation:** This explicitly sets the owner and group owner of `design.txt` to the current user (`sarthak`). It ensures proper ownership boundaries are established for the project data.
+   - **Explanation:** This explicitly sets the owner and group owner of `design.txt` to the current user (`BAPAIAH`). It ensures proper ownership boundaries are established for the project data.
